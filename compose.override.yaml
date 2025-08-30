@@ -6,3 +6,5 @@ services:
   notes:
     networks:
       - notes-app-net
+    environment:
+      - NOTESBOOKS_API_URL=http://notebooks/api/notebooks

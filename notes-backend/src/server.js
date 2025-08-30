@@ -1,11 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const noteRouter = require("./routes");
+const bodyParser = require("body-parser");
 
 const app = express();
-
-app.get("/api/notes", (req, res) => {
-    res.json({ message: "Hello from notes!" });
-});
+app.use(bodyParser.json());
+app.use("/api/notes", noteRouter);
 
 const port = process.env.PORT;
 
