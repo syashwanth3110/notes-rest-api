@@ -1,0 +1,3 @@
+include:
+  - notes-backend/compose.yaml
+  - notebooks-backend/compose.yaml
